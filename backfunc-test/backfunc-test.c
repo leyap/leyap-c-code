@@ -10,7 +10,11 @@ void backfunc (int *buf, int a, int b) {
 			printf ("%d\n", a);
 		return;
 	} else if (b-a > 1)
-	printf ("%d\n", mid);
+		printf ("%d\n", mid);
+	else {
+		printf ("%d,%d\n", a, b);
+		return;
+	}
 
 	backfunc (buf, a, mid-1);
 	backfunc (buf, mid+1, b);
